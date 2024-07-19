@@ -1,0 +1,11 @@
+*Lista telefonica
+
+*adicionar nome e contato
+
+*adicionar favoritos e aparecer um img de extrela
+
+*adicionar bloqueados e aparecer um img d bloqueio
+
+*apagar contato
+
+*pesquisas de favoritos, bloqueados e todos

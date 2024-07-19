@@ -1,0 +1,157 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body{
+  background-image: url("../img/background.jpg");
+  background-position:center;
+  background-size: cover;
+
+}
+
+#phone-book-container{
+  background-color:#eef1f5;
+  max-width: 600px;
+  margin:3rem auto;
+  padding: 2rem;
+  border-radius:15px;
+}
+
+#phone-book-container header{
+  display: flex;
+  justify-content: center;
+  gap:2rem;
+  padding-bottom: .5rem;
+  border-bottom:1px solid #ccc;
+}
+
+#phone-book-container header i{
+  font-size:2rem;
+}
+
+.add__number,
+.phone-book-form,
+.cancel__add__new__contact,
+.edit__contact{
+  padding: 1rem 0 1rem 0;
+  border-bottom:1px solid #ccc;
+  display:flex;
+}
+
+.add__number button i{
+  padding: .2rem;
+}
+
+.add__number {
+  gap:30px;
+  align-items: center;
+}
+
+.cancel__add__new__contact{
+  justify-content: center;
+}
+
+.phone-book-form,
+.edit__contact{
+  justify-content: space-between;
+}
+
+.phone__book__name p,
+.phone__book__number p{
+  padding-bottom: .5rem;
+}
+
+button{
+  background-color: #FDFDFD;
+  color: #102f5e;
+  font-size: 1rem;
+  border: 2px solid #102f5e;
+  padding: .3rem .6rem;
+  cursor:pointer;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  transition: .4s;
+}
+
+button:hover{
+  color:#fff;
+  background-color: #102f5e;
+}
+
+button i{
+  font-weight: bold;
+  pointer-events:none;
+  /* Problema futuro-> Se eu clico no botão o evento vai ser disparado, mas se eu clico no icone não pq o icone esta acima do botão. o pointer-events: none desabilita os eventos de click no icone. Assim resolvendo o problema; */
+}
+
+input{
+  padding: .25rem .5rem;
+}
+
+.hide{
+  display:none !important; 
+}
+
+.phone__number{
+  padding: .5rem 0 .5rem 0;
+  border-bottom:1px solid #ccc;
+  display:grid;
+  grid-template-columns: 3fr 3fr 1fr 1fr 1fr;
+  align-items: center;
+  column-gap:15px;
+}
+
+.phone__number button i{
+  margin-bottom: .5rem;
+  padding-right: 5px ;
+}
+
+.name{
+  margin-left:5px
+}
+
+.number{
+  margin:auto;
+}
+
+.blocked{
+  background-color: #ff0000;
+  color:#ccc;
+}
+
+.favorite{
+  background-color: #4dbb28;
+  color:#ffffff;
+}
+
+.blocked p{
+  text-decoration: line-through;
+}
+
+.blocked .blocked__number,
+.favorite .favorite__number{
+  background-color: transparent;
+  color:#fff;
+  border-color: #fff;
+  transition: .4s;
+  /* NÃO ESQUECER DE ANALISAR DE ESSE .4S ESTÁ FUNCIONANDO */
+}
+
+.favorite .favorite__number i{
+  color:#fff200;
+}
+
+.blocked .blocked__number:hover,
+.favorite .favorite__number:hover{
+  background-color: #102f5e;
+  border: 2px solid #102f5e;
+}
+
+.blocked .blocked__number i,
+.favorite .favorite__number i{
+  font-size: 1.5rem;
+}

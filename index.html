@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lista Telefonica</title>
+
+  <!-- CSS FILE -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- JS FILE -->
+   <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/sweetalert2@11.js"></script>
+
+</head>
+
+<body>
+  <div id="phone-book-container">
+    <header>
+      <i class="fa-solid fa-mobile-retro"></i>      <h1>Lista Telefonica</h1>
+    </header>
+
+    <div id="js-add-number" class="add__number">
+      <p>Adicionar novo número:</p>
+      <button id="js-btn-add-new-contact" type="submit">
+        <i class="fa-thin fa-plus"></i>
+      </button>
+    </div>
+
+    <div id="js-cancel-add-new-contact"  class="cancel__add__new__contact hide">
+      <button type="submit">Cancelar</button>
+    </div>
+    
+    <div id="js-phone-book-form" class="phone-book-form hide">
+
+      <div class="phone__book__name">
+        <p>Nome:</p>
+        <input type="text" id="js-name-input" required placeholder="Digite o nome">
+      </div>
+
+      <div class="phone__book__number">
+        <p>Número:</p>
+        <input type="number" id="js-number-input" required placeholder="Digite o numero">
+      </div>
+
+      <button type="submit">
+        <i class="fa-solid fa-check-double"></i>
+      </button>
+    </div>
+
+    <!-- <div class="js__edit__contact edit__contact hide">
+      <div class="edit__name">
+        <p>Editar nome:</p>
+        <input type="text" id="js-edit-name-input" required placeholder="Digite o nome">
+      </div>
+
+      <div class="edit__number">
+        <p>Editar número:</p>
+        <input type="number" id="js-edit-number-input" required placeholder="Digite o numero">
+      </div>
+
+      <button type="submit">
+        <i class="fa-solid fa-check-double"></i>
+      </button>
+    </div> -->
+    
+
+    <div id="js-phone-book-list" class="phone__book__list">
+      
+    </div>
+  </div>
+</body>
+</html>
