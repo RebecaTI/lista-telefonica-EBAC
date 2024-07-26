@@ -74,3 +74,55 @@
   </div>
 </body>
 </html>
+
+<!-- 
+PERGUNTAS AO PROFESSOR 
+1- Ao importar um script no head e usar um defer, ou colocar antes do final do body, faz alguma diferença?
+-->
+
+
+<!-- 
+
+<div class="phone__book__number">
+    <p>Número:</p>
+    <input type="number" id="number-input" placeholder="Digite o número">
+</div>
+
+<script>
+    // Seleciona o elemento de input
+    var numberInput = document.getElementById('number-input');
+
+    // Define o limite máximo de dígitos
+    var maxLength = 13;
+
+    // Adiciona um listener para o evento 'input'
+    numberInput.addEventListener('input', function() {
+        // Verifica se o comprimento do valor inserido excede o maxLength
+        if (numberInput.value.length > maxLength) {
+            // Se exceder, define o valor do input para os primeiros maxLength caracteres
+            numberInput.value = numberInput.value.slice(0, maxLength);
+        }
+    });
+</script>
+
+-->
+
+
+<!-- 
+
+<script>
+        document.getElementById('telefone').addEventListener('input', function (e) {
+            let valor = e.target.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+
+            if (valor.length > 0) {
+                valor = valor.replace(/^(\d{1})(\d{1})/, '$1 $2'); // Adiciona espaço após o primeiro dígito
+            }
+            if (valor.length > 6) {
+                valor = valor.replace(/^(\d{1} \d{4})(\d{0,4})/, '$1-$2'); // Adiciona hífen entre quarto e quinto dígitos
+            }
+
+            e.target.value = valor;
+        });
+    </script>
+
+-->

@@ -12,42 +12,6 @@ const favoriteIconBtn = document.querySelectorAll('.favorite__number');
 const blockIconBtn = document.querySelectorAll('.blocked__number');
 const removeIconBtn = document.querySelectorAll('.remove__number');
 
-
-// //Criar a função editContact
-
-//   document.addEventListener('click', (e) => {
-//   const targetEl = e.target;
-//   const parentEl = targetEl.closest('div');
-
-//   const editContact = document.querySelector('.js__edit__contact');
-
-//   //Pegando os antigos valores
-//   let oldDatas = {
-//     oldInputName: nameInput.value ,
-//     oldInputNumber: numberInput.value,
-//   }
-
-//   if(targetEl.classList.contains('edit__number')){
-//     addNewContact.classList.toggle('hide');
-//     cancelBtn.classList.toggle('hide'); 
-//     editContact.classList.remove('hide');
-
-//     //Esta colocando dentro do input os antigos dados
-//     // oldNameValue = nameInput.innerText.trim();
-//     oldNameValue = oldInputName.innerText;
-
-//     console.log(oldNameValue);
-//   };
-
-//   if(parentEl.classList.contains('cancel__add__new__contact')){
-//     addNewContact.classList.remove('hide');
-//     cancelBtn.classList.add('hide'); 
-//     editContact.classList.add('hide');
-//   };
-
-// });
-
-
 function removeItem(){
   document.addEventListener('click', (e) => {
     const targetEl = e.target;
@@ -161,19 +125,18 @@ openAddNewContact();
 //ESSE CODIGO ESTA COM DEFEITO
 function applyFavoriteOrBlocked(){
   document.addEventListener('click', (e) => {
-    const targetEl = e.target;
-    const parentEl = targetEl.closest('div');
+  const targetEl = e.target;
+  const parentEl = targetEl.closest('div');
 
-    if(targetEl.classList.contains('favorite__number')){
-      parentEl.classList.toggle('favorite');
-    };
+  if(targetEl.classList.contains('favorite__number')){
+    parentEl.classList.toggle('favorite')
+  }
 
-    if(targetEl.classList.contains('blocked__number')){
-      parentEl.classList.toggle('blocked')
-    };
-  });
+  if(targetEl.classList.contains('blocked__number')){
+    parentEl.classList.toggle('blocked')
+  }
+});
 }
-
 applyFavoriteOrBlocked();
 
 //-------------------------------
